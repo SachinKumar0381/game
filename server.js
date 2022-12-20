@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(cors());
 app.use("/",userRoute);
 
-app.listen(8080,async()=>{
+app.listen(process.env.PORT || 8080,async()=>{
     await connection;
     console.log("server started")
 })
